@@ -40,7 +40,7 @@ services:
         "spring.jpa.hibernate.ddl-auto" : "update"
       }'
     volumes:
-      - ${APPLICATION_ROOT_FOLDER}/:/usr/src/mymaven
+      - ${APPLICATION_ROOT_FOLDER}:/var/heros-app
     restart: on-failure
 
 volumes:
