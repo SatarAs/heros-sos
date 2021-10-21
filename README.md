@@ -2,6 +2,12 @@
 
 ---
 
+## Liens utiles 
+
+- [Board Kanban](https://app.gitkraken.com/glo/board/YXEjEWMcSQBGudrn)
+
+---
+
 ## Installation
 
 ! Assurez-vous d'avoir **JDK-11** d'installer !
