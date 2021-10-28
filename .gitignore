@@ -160,6 +160,8 @@ buildNumber.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
 
+.env
+
 ### Maven Patch ###
 # Eclipse m2e generated files
 # Eclipse Core

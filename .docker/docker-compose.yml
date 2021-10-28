@@ -33,10 +33,13 @@ services:
       - "8083:8080"
     environment:
       SPRING_APPLICATION_JSON: '{
-        "spring.datasource.url"  : "jdbc:mysql://mysqldb:$MYSQLDB_DOCKER_PORT/$MYSQLDB_DATABASE?useSSL=false",
+        "spring.datasource.url"  : "jdbc:mysql://db:$MYSQLDB_DOCKER_PORT/$MYSQLDB_DATABASE?useSSL=false",
         "spring.datasource.username" : "$MYSQLDB_USER",
         "spring.datasource.password" : "$MYSQLDB_ROOT_PASSWORD",
-        "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL5InnoDBDialect",
+        "spring.jpa.database-platform" : "org.hibernate.dialect.MySQL8Dialect",
+        "spring.datasource.driver-class-name" : "com.mysql.cj.jdbc.Driver",
+        "spring.jpa.properties.hibername.jdbc.time_zone" : "UTC",
+        "spring.jpa.database" : "$MYSQLDB_JPA_DATABASE",
         "spring.jpa.hibernate.ddl-auto" : "update"
       }'
     volumes:
